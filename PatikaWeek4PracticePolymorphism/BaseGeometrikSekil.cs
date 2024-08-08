@@ -20,7 +20,7 @@ namespace PatikaWeek4PracticePolymorphism
 
     }
 
-    public class Kare() : BaseGeometrikSekil // Creating a new class that inherits from base class
+    public class Kare : BaseGeometrikSekil // Creating a new class that inherits from base class
     {
         public override void AreaCalculation() // Overriding first method for Kare class
         {
@@ -28,7 +28,7 @@ namespace PatikaWeek4PracticePolymorphism
         }
     }
 
-    public class Dikdortgen() : BaseGeometrikSekil // Creating a new class that inherits from base class
+    public class Dikdortgen : BaseGeometrikSekil // Creating a new class that inherits from base class
     {
         public override void AreaCalculation() // Overriding first method for Dikdortgen class
         {
@@ -36,7 +36,7 @@ namespace PatikaWeek4PracticePolymorphism
         }
     }
 
-    public class DikUcgen() : BaseGeometrikSekil // Creating a new class that inherits from base class
+    public class DikUcgen : BaseGeometrikSekil // Creating a new class that inherits from base class
     {
         public override void AreaCalculation() // Overriding first method for DikUcgen class
         {
