@@ -71,24 +71,22 @@ kare.Width = 6;
 kare.Height = 6;
 
 // Display area information
-kare.AreaCalculation(); // Output: Karenin alanı --> 36
+kare.AreaCalculation();
 
 Dikdortgen dikdortgen = new Dikdortgen(); // Creating an instance of Dikdortgen object
 
-// Setting properties
+//Setting properties
 dikdortgen.Width = 8;
 dikdortgen.Height = 3;
 
 // Display area information
-dikdortgen.AreaCalculation(); // Output: Dikdörtgenin alanı --> 24
+dikdortgen.AreaCalculation();
 
 DikUcgen dikUcgen = new DikUcgen(); // Creating an instance of DikUcgen object
 
-// Setting properties
+//Setting properties
 dikUcgen.Width = 7;
 dikUcgen.Height = 9;
 
-// Display area information
-dikUcgen.AreaCalculation(); // Output: Dik üçgenin alanı --> 31.5
-
-
+//Display area information
+dikUcgen.AreaCalculation();
