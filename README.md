@@ -20,7 +20,7 @@ Bu proje, C# dilinde polimorfizm kavramını göstermek için hazırlanmıştır
 
 Projede iki ana dosya bulunmaktadır:
 
-!.) BaseGeometrikSekil.cs: Bu dosyada, temel geometrik şekil sınıfı ve bu sınıftan türeyen alt sınıflar yer almaktadır.
+1.) BaseGeometrikSekil.cs: Bu dosyada, temel geometrik şekil sınıfı ve bu sınıftan türeyen alt sınıflar yer almaktadır.
 
 namespace PatikaWeek4PracticePolymorphism
 {
