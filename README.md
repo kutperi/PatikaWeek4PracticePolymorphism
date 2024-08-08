@@ -1,46 +1,94 @@
-# PatikaWeek4PracticePolymorphism
+# Geometrik Şekil Alan Hesaplama
 
-Bu proje, polimorfizm kullanarak farklı geometrik şekillerin alanlarını hesaplayan bir uygulamadır. Projede Kare, Dikdörtgen ve Dik Üçgen sınıfları bulunmaktadır ve her biri `BaseGeometrikSekil` sınıfından türemiştir.
+Bu repo, C# dilinde polimorfizm kullanarak geometrik şekillerin alanını hesaplayan bir uygulama içermektedir. Bu projede, temel bir geometrik şekil sınıfı oluşturulmuş ve bu sınıftan türeyen kare, dikdörtgen ve dik üçgen sınıfları yer almaktadır.
 
-Kullanım
-Projeyi çalıştırmak için Program.cs dosyasını açın ve çalıştırın. Main metodu aşağıdaki adımları içerir:
+## İçindekiler
 
-Kare nesnesi oluşturma ve alan hesaplama
-Dikdortgen nesnesi oluşturma ve alan hesaplama
-DikUcgen nesnesi oluşturma ve alan hesaplama
+- [Genel Bakış](#genel-bakış)
+- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
+- [Kullanım](#kullanım)
 
-Kare kare = new Kare();
-kare.Width = 6;
+## Genel Bakış
+
+Bu proje, C# dilinde polimorfizm kavramını göstermek için hazırlanmıştır. `BaseGeometrikSekil` isimli bir temel sınıf ve bu sınıftan türetilmiş `Kare`, `Dikdortgen` ve `DikUcgen` sınıflarını içermektedir. Her bir sınıf, `AreaCalculation` metodunu kendi alan hesaplamasını yapmak üzere geçersiz kılmaktadır.
+
+## Kullanılan Teknolojiler
+
+- .NET Core
+
+## Kullanım
+
+Projede iki ana dosya bulunmaktadır:
+
+BaseGeometrikSekil.cs: Bu dosyada, temel geometrik şekil sınıfı ve bu sınıftan türeyen alt sınıflar yer almaktadır.
+
+namespace PatikaWeek4PracticePolymorphism
+{
+    public class BaseGeometrikSekil // Creating a new class
+    {
+        public double Width { get; set; } // Defining properties
+        public double Height { get; set; }
+
+        public virtual void AreaCalculation() // Creating a virtual method that calculates area
+        {
+            Console.WriteLine($"Verilen şeklin alanı --> {Width * Height}");
+        }
+    }
+
+    public class Kare : BaseGeometrikSekil // Creating a new class that inherits from base class
+    {
+        public override void AreaCalculation() // Overriding first method for Kare class
+        {
+            Console.WriteLine($"Karenin alanı --> {Width * Height}");
+        }
+    }
+
+    public class Dikdortgen : BaseGeometrikSekil // Creating a new class that inherits from base class
+    {
+        public override void AreaCalculation() // Overriding first method for Dikdortgen class
+        {
+            Console.WriteLine($"Dikdörtgenin alanı --> {Width * Height}");
+        }
+    }
+
+    public class DikUcgen : BaseGeometrikSekil // Creating a new class that inherits from base class
+    {
+        public override void AreaCalculation() // Overriding first method for DikUcgen class
+        {
+            Console.WriteLine($"Dik üçgenin alanı --> {(Width * Height) / 2}");
+        }
+    }
+}
+
+Program.cs: Bu dosyada, Main metodu yer almakta ve oluşturulan sınıfların kullanımı gösterilmektedir.
+
+using PatikaWeek4PracticePolymorphism;
+
+Kare kare = new Kare(); // Creating an instance of Kare object
+
+// Setting properties
+kare.Width = 6; 
 kare.Height = 6;
-kare.AreaCalculation();
 
-Dikdortgen dikdortgen = new Dikdortgen();
+// Display area information
+kare.AreaCalculation(); // Output: Karenin alanı --> 36
+
+Dikdortgen dikdortgen = new Dikdortgen(); // Creating an instance of Dikdortgen object
+
+// Setting properties
 dikdortgen.Width = 8;
 dikdortgen.Height = 3;
-dikdortgen.AreaCalculation();
 
-DikUcgen dikUcgen = new DikUcgen();
+// Display area information
+dikdortgen.AreaCalculation(); // Output: Dikdörtgenin alanı --> 24
+
+DikUcgen dikUcgen = new DikUcgen(); // Creating an instance of DikUcgen object
+
+// Setting properties
 dikUcgen.Width = 7;
 dikUcgen.Height = 9;
-dikUcgen.AreaCalculation();
+
+// Display area information
+dikUcgen.AreaCalculation(); // Output: Dik üçgenin alanı --> 31.5
 
 
-Sınıflar
-BaseGeometrikSekil
-BaseGeometrikSekil sınıfı, tüm geometrik şekillerin temel özelliklerini ve metotlarını içerir.
-
-Özellikler:
-
-Width: Genişlik
-Height: Yükseklik
-Metotlar:
-
-AreaCalculation(): Şeklin alanını hesaplar ve ekrana yazdırır.
-Kare
-Kare sınıfı, BaseGeometrikSekil sınıfından türetilmiştir ve AreaCalculation metodunu override eder.
-
-Dikdortgen
-Dikdortgen sınıfı, BaseGeometrikSekil sınıfından türetilmiştir ve AreaCalculation metodunu override eder.
-
-DikUcgen
-DikUcgen sınıfı, BaseGeometrikSekil sınıfından türetilmiştir ve AreaCalculation metodunu override eder. Dik üçgenin alanını (Width * Height) / 2 formülü ile hesaplar.
