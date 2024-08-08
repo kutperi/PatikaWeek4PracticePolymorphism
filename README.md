@@ -2,27 +2,13 @@
 
 Bu proje, polimorfizm kullanarak farklı geometrik şekillerin alanlarını hesaplayan bir uygulamadır. Projede Kare, Dikdörtgen ve Dik Üçgen sınıfları bulunmaktadır ve her biri `BaseGeometrikSekil` sınıfından türemiştir.
 
-## İçindekiler
-- [Kurulum](#kurulum)
-- [Kullanım](#kullanım)
-- [Sınıflar](#sınıflar)
-  - [BaseGeometrikSekil](#basegeometriksekil)
-  - [Kare](#kare)
-  - [Dikdortgen](#dikdortgen)
-  - [DikUcgen](#dikucgen)
-- [Katkıda Bulunanlar](#katkıda-bulunanlar)
-- [Lisans](#lisans)
-
 Kullanım
 Projeyi çalıştırmak için Program.cs dosyasını açın ve çalıştırın. Main metodu aşağıdaki adımları içerir:
 
 Kare nesnesi oluşturma ve alan hesaplama
 Dikdortgen nesnesi oluşturma ve alan hesaplama
 DikUcgen nesnesi oluşturma ve alan hesaplama
-Örnek kullanım:
 
-csharp
-Kodu kopyala
 Kare kare = new Kare();
 kare.Width = 6;
 kare.Height = 6;
@@ -37,6 +23,8 @@ DikUcgen dikUcgen = new DikUcgen();
 dikUcgen.Width = 7;
 dikUcgen.Height = 9;
 dikUcgen.AreaCalculation();
+
+
 Sınıflar
 BaseGeometrikSekil
 BaseGeometrikSekil sınıfı, tüm geometrik şekillerin temel özelliklerini ve metotlarını içerir.
